@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: 'Rajdhani', sans-serif;
+  --font-display: 'Orbitron', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* ── Holographic Dark Mode OS (Default) ── */
+:root, .dark {
+  --radius: 0; /* Cyber UI uses sharp or cut corners, not rounded */
+  --background: #050a0f;
+  --foreground: #e0f8f5;
+  --card: #08121a;
+  --card-foreground: #e0f8f5;
+  --popover: #08121a;
+  --popover-foreground: #e0f8f5;
+  --primary: #00ffcc; /* Bright Neon Cyan/Teal */
+  --primary-foreground: #001a14;
+  --secondary: #0a1b24;
+  --secondary-foreground: #e0f8f5;
+  --muted: #0a1b24;
+  --muted-foreground: #4b8b8b;
+  --accent: #00ffcc;
+  --accent-foreground: #001a14;
+  --destructive: #ff3366;
+  --border: #00ffcc33;
+  --input: #00ffcc33;
+  --ring: #00ffcc;
+  --cyan: #00ccff;
+  --amber: #ffcc00;
+  
+  --chart-1: #00ffcc;
+  --chart-2: #00ccff;
+  --chart-3: #ffcc00;
+  --chart-4: #ff3366;
+  --chart-5: #cc33ff;
+  
+  --sidebar: #08121a;
+  --sidebar-foreground: #e0f8f5;
+  --sidebar-primary: #00ffcc;
+  --sidebar-primary-foreground: #001a14;
+  --sidebar-accent: #0a1b24;
+  --sidebar-accent-foreground: #e0f8f5;
+  --sidebar-border: #00ffcc33;
+  --sidebar-ring: #00ffcc;
+
+  --glass-bg: rgba(0, 255, 204, 0.03);
+  --glass-border: rgba(0, 255, 204, 0.2);
+}
+
+/* Light Mode override */
+.light {
+  --background: #f0fafa;
+  --foreground: #001a14;
+  --card: #ffffff;
+  --card-foreground: #001a14;
+  --primary: #00d4aa;
+  --primary-foreground: #ffffff;
+  --secondary: #e6f7f5;
+  --secondary-foreground: #001a14;
+  --muted: #e6f7f5;
+  --muted-foreground: #3d6e64;
+  --accent: #f0a500;
+  --accent-foreground: #001a14;
+  --border: #00d4aa44;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 212, 170, 0.3);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    background-image: 
+      linear-gradient(rgba(0, 255, 204, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 204, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    background-position: center center;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-widest uppercase;
+  }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--background); }
+  ::-webkit-scrollbar-thumb { background: var(--primary); }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(90deg, var(--primary) 0%, var(--cyan) 50%, var(--amber) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+  }
+  
+  .glass {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Clip-path cut corners for Cyberpunk buttons */
+  .cyber-button {
+    clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
+  }
+
+  /* Glowing hover effect */
+  .glow-effect {
+    box-shadow: 0 0 15px var(--glow-color);
+  }
+  
+  .glow-text {
+    text-shadow: 0 0 10px var(--primary);
+  }
+}
+
+/* Animations */
+@keyframes scanline {
+  0% { transform: translateY(-100%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100%); opacity: 0; }
+}
+
+.scanner-beam {
+  animation: scanline 3s linear infinite;
+}
+
+/* Project Card SVG Keyframes */
+@keyframes waveBar {
+  0%, 100% { transform: scaleY(0.2); }
+  50%       { transform: scaleY(1); }
+}
+@keyframes steam {
+  0%   { opacity: 0; transform: translateY(0) scaleX(1); }
+  50%  { opacity: 0.8; }
+  100% { opacity: 0; transform: translateY(-20px) scaleX(1.4); }
+}
+@keyframes wifi-ping {
+  0%          { opacity: 0; transform: scale(0.4); }
+  60%         { opacity: 0.8; }
+  100%        { opacity: 0; transform: scale(1.4); }
+}
+@keyframes node-pulse {
+  0%, 100% { opacity: 0.3; r: 3; }
+  50%      { opacity: 1; r: 6; }
+}
+@keyframes win-blink {
+  0%, 88%, 100% { opacity: 0.1; }
+  44%           { opacity: 1; }
+}

@@ -1,0 +1,49 @@
+# dependencies
+/node_modules
+bala-portfolio-website-main/node_modules
+
+# next.js
+/.next
+/out
+/bala-portfolio-website-main/.next
+
+# production
+/build
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# environment
+.env
+.env.local
+.env.development.local
+.env.production.local
+
+# misc
+.DS_Store
+*.pem
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# lock files (avoid conflicts - keep only package.json)
+pnpm-lock.yaml
+bun.lock
+package-lock.json
+bala-portfolio-website-main/pnpm-lock.yaml
+bala-portfolio-website-main/bun.lock
+bala-portfolio-website-main/package-lock.json
+
+# Nested duplicate folder (old zip extract artifact)
+bala-portfolio-website-main/
+
+# IDE
+.vscode/
+.idea/
