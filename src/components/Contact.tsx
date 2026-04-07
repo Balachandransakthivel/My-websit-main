@@ -6,9 +6,9 @@ import { Mail, MapPin, Github, Linkedin, Send, Phone, Instagram, CheckCircle, Al
 import { useState } from "react";
 
 // ── EmailJS config ── Sign up free at emailjs.com and replace these:
-const EMAILJS_SERVICE_ID  = "YOUR_SERVICE_ID";
+const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
 const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-const EMAILJS_PUBLIC_KEY  = "YOUR_PUBLIC_KEY";
+const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -87,77 +87,77 @@ export function Contact() {
             </div>
 
             <div className="space-y-6">
-                <motion.a
-                  whileHover={{ scale: 1.02, x: 5 }}
-                  href="mailto:balas111005@gmail.com"
-                  className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border hover:border-primary/50 transition-colors"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Email</p>
-                    <p className="font-medium">balas111005@gmail.com</p>
-                  </div>
-                </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.02, x: 5 }}
+                href="mailto:balas111005@gmail.com"
+                className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border hover:border-primary/50 transition-colors"
+              >
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">Email</p>
+                  <p className="font-medium">balas111005@gmail.com</p>
+                </div>
+              </motion.a>
 
-                <motion.a
-                  whileHover={{ scale: 1.02, x: 5 }}
-                  href="tel:9342727360"
-                  className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border hover:border-primary/50 transition-colors"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-blue-500" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Phone</p>
-                    <p className="font-medium">+91 93427 27360</p>
-                  </div>
-                </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.02, x: 5 }}
+                href="tel:9342727360"
+                className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border hover:border-primary/50 transition-colors"
+              >
+                <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-blue-500" />
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">Phone</p>
+                  <p className="font-medium">+91 93427 27360</p>
+                </div>
+              </motion.a>
 
-                <motion.div
-                  whileHover={{ scale: 1.02, x: 5 }}
-                  className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-green-500" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Location</p>
-                    <p className="font-medium">Kallakurichi, Tamil Nadu, India</p>
-                  </div>
-                </motion.div>
-              </div>
+              <motion.div
+                whileHover={{ scale: 1.02, x: 5 }}
+                className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border"
+              >
+                <div className="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center">
+                  <MapPin className="w-6 h-6 text-green-500" />
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">Location</p>
+                  <p className="font-medium">Kallakurichi, Tamil Nadu, India</p>
+                </div>
+              </motion.div>
+            </div>
 
-              <div className="flex gap-4">
-                <motion.a
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  href="https://github.com/Balachandransakthivel"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-card border border-border hover:border-primary/50 flex items-center justify-center transition-colors"
-                >
-                  <Github className="w-5 h-5" />
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  href="https://www.linkedin.com/in/balas111005"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-card border border-border hover:border-primary/50 flex items-center justify-center transition-colors"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  href="https://www.instagram.com/_im__bala__/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-card border border-border hover:border-primary/50 flex items-center justify-center transition-colors text-pink-500"
-                >
-                  <Instagram className="w-5 h-5" />
-                </motion.a>
-              </div>
+            <div className="flex gap-4">
+              <motion.a
+                whileHover={{ scale: 1.1, y: -2 }}
+                href="https://github.com/Balachandransakthivel"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-card border border-border hover:border-primary/50 flex items-center justify-center transition-colors"
+              >
+                <Github className="w-5 h-5" />
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.1, y: -2 }}
+                href="https://www.linkedin.com/in/balas111005"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-card border border-border hover:border-primary/50 flex items-center justify-center transition-colors"
+              >
+                <Linkedin className="w-5 h-5" />
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.1, y: -2 }}
+                href="https://www.instagram.com/_im__bala__/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-card border border-border hover:border-primary/50 flex items-center justify-center transition-colors text-pink-500"
+              >
+                <Instagram className="w-5 h-5" />
+              </motion.a>
+            </div>
 
           </motion.div>
 
@@ -179,7 +179,7 @@ export function Contact() {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-3 bg-secondary rounded-lg border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
-                    placeholder="John Doe"
+                    placeholder="Bala"
                     required
                   />
                 </div>
@@ -193,7 +193,7 @@ export function Contact() {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-4 py-3 bg-secondary rounded-lg border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
-                    placeholder="john@example.com"
+                    placeholder="bala123@example.com"
                     required
                   />
                 </div>

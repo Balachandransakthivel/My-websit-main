@@ -111,9 +111,9 @@ export function Certifications() {
   return (
     <section id="certs" className="py-20 bg-background/50 relative">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAwaDQwdjQwSDBWMHptMjAgMjB2MjBoMjBWMjBIMjB6IiBmaWxsPSIjMDBkNGFhIiBmaWxsLW9wYWNpdHk9IjAuMDIiLz48L3N2Zz4=')] mix-blend-screen" />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        
+
         {/* LENSES & CERTS SECTION */}
         <motion.div
           ref={ref}
@@ -148,7 +148,7 @@ export function Certifications() {
             >
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent h-[200%] -translate-y-full group-hover:translate-y-full transition-transform duration-1000 ease-in-out pointer-events-none mix-blend-overlay" />
               <div className={`absolute top-0 left-0 w-1 h-full bg-${cert.accent} opacity-50 group-hover:opacity-100 transition-opacity drop-shadow-[0_0_8px_var(--tw-shadow-color)] shadow-${cert.accent}`} />
-              
+
               <div className="flex items-start justify-between mb-4 flex-none">
                 <div className="p-3 rounded-lg bg-background/50 border border-primary/20 backdrop-blur-sm group-hover:scale-110 transition-transform">
                   {cert.icon}
@@ -160,7 +160,7 @@ export function Certifications() {
                   </span>
                 </div>
               </div>
-              
+
               <div className="flex-1">
                 <h3 className="text-lg font-display font-semibold text-foreground mb-2 leading-tight group-hover:text-primary transition-colors">
                   {cert.title}
@@ -172,7 +172,7 @@ export function Certifications() {
                   {cert.description}
                 </p>
               </div>
-              
+
               <div className="mt-auto">
                 <div className="text-xs font-mono font-bold text-primary tracking-widest flex items-center gap-2 uppercase">
                   Verify Credentials <ExternalLink className="w-3 h-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
@@ -190,9 +190,9 @@ export function Certifications() {
           className="relative pt-12 border-t border-primary/20"
         >
           <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-background px-4 z-10">
-            <a 
-              href="https://www.hackerrank.com/profile/balas111005" 
-              target="_blank" 
+            <a
+              href="https://www.hackerrank.com/profile/balas111005"
+              target="_blank"
               rel="noreferrer"
               className="text-[#00EA64] font-mono text-sm tracking-widest uppercase flex items-center gap-2 border border-[#00EA64]/30 px-4 py-2 rounded bg-[#00EA64]/5 hover:bg-[#00EA64]/20 transition-colors shadow-[0_0_15px_rgba(0,234,100,0.2)]"
             >
@@ -258,16 +258,16 @@ export function Certifications() {
                   <X className="w-6 h-6" />
                 </button>
               </div>
-              
+
               <div className="relative w-full aspect-[4/3] sm:aspect-video bg-black p-4 flex flex-col items-center justify-center">
                 {selectedCert.image ? (
                   <div className="relative w-full h-full rounded border border-primary/10 overflow-hidden bg-black/50 flex items-center justify-center">
-                     {/* Using regular img for maximum compatibility */}
-                     <img
-                        src={selectedCert.image}
-                        alt={selectedCert.title}
-                        className="max-w-full max-h-full object-contain"
-                      />
+                    {/* Using regular img for maximum compatibility */}
+                    <img
+                      src={selectedCert.image}
+                      alt={selectedCert.title}
+                      className="max-w-full max-h-full object-contain"
+                    />
                   </div>
                 ) : (
                   <div className="text-center font-mono p-12 border border-dashed border-primary/30 rounded">

@@ -8,7 +8,7 @@ import { Terminal } from "lucide-react";
 const SKILL_CATEGORIES = [
   {
     category: "Languages",
-    items: ["TypeScript", "Python", "Java", "C++", "HTML5", "CSS3"]
+    items: ["TypeScript", "Python", "Java", "JS", "HTML5", "CSS3"]
   },
   {
     category: "Frontend",
@@ -16,11 +16,11 @@ const SKILL_CATEGORIES = [
   },
   {
     category: "Backend & DB",
-    items: ["Node.js", "Express", "MongoDB", "PostgreSQL", "Prisma", "Supabase"]
+    items: ["Node.js", "Express", "MongoDB", "PostgreSQL", "Supabase"]
   },
   {
     category: "DevOps & Tools",
-    items: ["Docker", "Git", "REST APIs", "Vercel"]
+    items: ["Docker", "Git", "REST APIs", "postman","figma", "Vercel"]
   }
 ];
 
@@ -58,7 +58,7 @@ export function Skills() {
               className="bg-card/20 backdrop-blur-md rounded-xl p-6 border border-primary/20 relative group overflow-hidden cyber-button"
             >
               <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-              
+
               <div className="flex items-center gap-3 mb-6 relative z-10">
                 <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                 <h3 className="font-mono text-lg text-foreground font-bold uppercase tracking-wider">{cat.category}</h3>

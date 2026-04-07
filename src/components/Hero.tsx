@@ -37,7 +37,7 @@ export function Hero() {
       }, isDeleting ? 45 : 80);
     }
     return () => clearTimeout(timeout);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [displayText, isDeleting, roleIndex]);
 
   return (
@@ -89,7 +89,7 @@ export function Hero() {
               transition={{ delay: 0.5 }}
               className="text-muted-foreground text-base sm:text-lg max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed"
             >
-              Passionate about Full-Stack Development, Backend Systems, and AI-based applications. 
+              Passionate about Full-Stack Development, AI-based applications.
               Building scalable projects and continuously learning modern technologies.
             </motion.p>
 
@@ -99,81 +99,81 @@ export function Hero() {
               transition={{ delay: 0.6 }}
               className="flex flex-wrap gap-4 justify-center lg:justify-start mb-8"
             >
-                <motion.a
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  href={resumeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-3 bg-primary text-primary-foreground font-mono font-bold tracking-wider hover:bg-primary/90 transition-colors flex items-center gap-2 cyber-button hover:shadow-[0_0_15px_rgba(0,212,170,0.4)]"
-                >
-                  <FileText className="w-4 h-4" />
-                  View Resume
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  href="https://drive.google.com/uc?export=download&id=1z3Tc1QnWLP6F_Qq5nQsXwVqwNy1r8iEZ"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-3 bg-primary text-primary-foreground font-mono font-bold tracking-wider hover:bg-primary/90 transition-colors flex items-center gap-2 cyber-button hover:shadow-[0_0_15px_rgba(0,212,170,0.4)]"
-                >
-                  <FileDown className="w-4 h-4" /> Download
-                </motion.a>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.7 }}
-                className="flex flex-wrap gap-4 justify-center lg:justify-start"
+              <motion.a
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                href={resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-primary text-primary-foreground font-mono font-bold tracking-wider hover:bg-primary/90 transition-colors flex items-center gap-2 cyber-button hover:shadow-[0_0_15px_rgba(0,212,170,0.4)]"
               >
-                <motion.a
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  href="https://github.com/Balachandransakthivel"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-secondary hover:bg-secondary/80 flex items-center justify-center transition-colors"
-                  title="GitHub"
-                >
-                  <Github className="w-5 h-5" />
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  href="https://www.linkedin.com/in/balas111005"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-secondary hover:bg-secondary/80 flex items-center justify-center transition-colors"
-                  title="LinkedIn"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  href="https://www.instagram.com/_im__bala__/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-secondary hover:bg-secondary/80 flex items-center justify-center transition-colors text-pink-500"
-                  title="Instagram"
-                >
-                  <Instagram className="w-5 h-5" />
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  href="tel:9342727360"
-                  className="w-12 h-12 rounded-full bg-secondary hover:bg-secondary/80 flex items-center justify-center transition-colors text-green-500"
-                  title="Call Me"
-                >
-                  <Phone className="w-5 h-5" />
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  href="mailto:balas111005@gmail.com"
-                  className="w-12 h-12 rounded-full bg-secondary hover:bg-secondary/80 flex items-center justify-center transition-colors"
-                  title="Email"
-                >
-                  <Mail className="w-5 h-5" />
-                </motion.a>
+                <FileText className="w-4 h-4" />
+                View Resume
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                href="https://drive.google.com/uc?export=download&id=1z3Tc1QnWLP6F_Qq5nQsXwVqwNy1r8iEZ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-primary text-primary-foreground font-mono font-bold tracking-wider hover:bg-primary/90 transition-colors flex items-center gap-2 cyber-button hover:shadow-[0_0_15px_rgba(0,212,170,0.4)]"
+              >
+                <FileDown className="w-4 h-4" /> Download
+              </motion.a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.7 }}
+              className="flex flex-wrap gap-4 justify-center lg:justify-start"
+            >
+              <motion.a
+                whileHover={{ scale: 1.1, y: -2 }}
+                href="https://github.com/Balachandransakthivel"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-secondary hover:bg-secondary/80 flex items-center justify-center transition-colors"
+                title="GitHub"
+              >
+                <Github className="w-5 h-5" />
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.1, y: -2 }}
+                href="https://www.linkedin.com/in/balas111005"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-secondary hover:bg-secondary/80 flex items-center justify-center transition-colors"
+                title="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.1, y: -2 }}
+                href="https://www.instagram.com/_im__bala__/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-secondary hover:bg-secondary/80 flex items-center justify-center transition-colors text-pink-500"
+                title="Instagram"
+              >
+                <Instagram className="w-5 h-5" />
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.1, y: -2 }}
+                href="tel:9342727360"
+                className="w-12 h-12 rounded-full bg-secondary hover:bg-secondary/80 flex items-center justify-center transition-colors text-green-500"
+                title="Call Me"
+              >
+                <Phone className="w-5 h-5" />
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.1, y: -2 }}
+                href="mailto:balas111005@gmail.com"
+                className="w-12 h-12 rounded-full bg-secondary hover:bg-secondary/80 flex items-center justify-center transition-colors"
+                title="Email"
+              >
+                <Mail className="w-5 h-5" />
+              </motion.a>
 
             </motion.div>
           </motion.div>
@@ -184,36 +184,36 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative order-1 lg:order-2 flex justify-center"
           >
-           <div className="flex-1 relative mt-16 md:mt-0 flex justify-center w-full max-w-[400px] md:max-w-none">
-          {/* Cyber HUD Badges */}
-          <div className="absolute -left-10 lg:-left-20 top-1/4 bg-card/60 backdrop-blur-md border border-primary/30 p-3 rounded-lg cyber-button animate-bounce" style={{ animationDuration: '4s' }}>
-            <p className="text-[10px] font-mono text-primary">SYS.UPTIME</p>
-            <p className="text-xl font-display font-bold text-foreground glow-text">99.9%</p>
-          </div>
-          
-          <div className="absolute -right-8 lg:-right-16 bottom-1/4 bg-card/60 backdrop-blur-md border border-amber-500/30 p-3 rounded-lg cyber-button animate-pulse" style={{ animationDuration: '3s' }}>
-            <p className="text-[10px] font-mono text-amber-500">PROJECTS</p>
-            <p className="text-xl font-display font-bold text-foreground drop-shadow-[0_0_10px_rgba(240,165,0,0.5)]">15+</p>
-          </div>
+            <div className="flex-1 relative mt-16 md:mt-0 flex justify-center w-full max-w-[400px] md:max-w-none">
+              {/* Cyber HUD Badges */}
+              <div className="absolute -left-10 lg:-left-20 top-1/4 bg-card/60 backdrop-blur-md border border-primary/30 p-3 rounded-lg cyber-button animate-bounce" style={{ animationDuration: '4s' }}>
+                <p className="text-[10px] font-mono text-primary">SYS.UPTIME</p>
+                <p className="text-xl font-display font-bold text-foreground glow-text">99.9%</p>
+              </div>
 
-          <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96">
-            {/* Holographic Glowing Ring */}
-            <div className="absolute inset-0 rounded-full border border-primary/20 bg-primary/5 blur-[2px] animate-[spin_10s_linear_infinite]" />
-            <div className="absolute inset-[-10px] rounded-full border-t-2 border-r-2 border-cyan-400/50 animate-[spin_15s_linear_infinite_reverse]" />
-            <div className="absolute inset-[-20px] rounded-full border-b-2 border-l-2 border-amber-500/50 animate-[spin_20s_linear_infinite]" />
-            
-            <div className="absolute inset-4 rounded-full overflow-hidden border-2 border-primary/40 bg-card relative group shadow-[0_0_30px_rgba(0,212,170,0.3)] hover:shadow-[0_0_50px_rgba(0,212,170,0.5)] transition-shadow duration-500">
-              <img 
-                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/WhatsApp-Image-2026-01-02-at-3.24.42-PM-1767438290143.jpeg?width=800&height=800&resize=contain"
-                alt="Balachandran S"
-                className="w-full h-full object-cover object-center select-none group-hover:scale-105 transition-transform duration-500 ease-out"
-              />
-              
-              {/* Scanning Light Beam Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/30 to-transparent scanner-beam z-10 pointer-events-none mix-blend-overlay" />
-            </div>
-          </div>
-        </div>  </motion.div>
+              <div className="absolute -right-8 lg:-right-16 bottom-1/4 bg-card/60 backdrop-blur-md border border-amber-500/30 p-3 rounded-lg cyber-button animate-pulse" style={{ animationDuration: '3s' }}>
+                <p className="text-[10px] font-mono text-amber-500">PROJECTS</p>
+                <p className="text-xl font-display font-bold text-foreground drop-shadow-[0_0_10px_rgba(240,165,0,0.5)]">15+</p>
+              </div>
+
+              <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96">
+                {/* Holographic Glowing Ring */}
+                <div className="absolute inset-0 rounded-full border border-primary/20 bg-primary/5 blur-[2px] animate-[spin_10s_linear_infinite]" />
+                <div className="absolute inset-[-10px] rounded-full border-t-2 border-r-2 border-cyan-400/50 animate-[spin_15s_linear_infinite_reverse]" />
+                <div className="absolute inset-[-20px] rounded-full border-b-2 border-l-2 border-amber-500/50 animate-[spin_20s_linear_infinite]" />
+
+                <div className="absolute inset-4 rounded-full overflow-hidden border-2 border-primary/40 bg-card relative group shadow-[0_0_30px_rgba(0,212,170,0.3)] hover:shadow-[0_0_50px_rgba(0,212,170,0.5)] transition-shadow duration-500">
+                  <img
+                    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/WhatsApp-Image-2026-01-02-at-3.24.42-PM-1767438290143.jpeg?width=800&height=800&resize=contain"
+                    alt="Balachandran S"
+                    className="w-full h-full object-cover object-center select-none group-hover:scale-105 transition-transform duration-500 ease-out"
+                  />
+
+                  {/* Scanning Light Beam Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/30 to-transparent scanner-beam z-10 pointer-events-none mix-blend-overlay" />
+                </div>
+              </div>
+            </div>  </motion.div>
         </div>
 
         <motion.div

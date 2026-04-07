@@ -106,7 +106,7 @@ export function About() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Interests</h4>
-                    <p className="text-sm text-muted-foreground">Full-Stack Development, Backend Systems, AI Applications</p>
+                    <p className="text-sm text-muted-foreground">Full-Stack Development, AI App Builder, AI Applications</p>
                   </div>
                 </div>
               </motion.div>

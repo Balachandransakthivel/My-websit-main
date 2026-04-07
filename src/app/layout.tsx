@@ -8,7 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Balachandran S | Portfolio",
-  description: "Computer Science student passionate about Full-Stack Development, Backend Systems, and AI-based applications. Building scalable projects and continuously learning modern technologies.",
+  description: "Computer Science student passionate about Full-Stack Development, AI-based applications. Building scalable projects and continuously learning modern technologies.",
   keywords: ["Balachandran", "Portfolio", "Full-Stack Developer", "React", "Node.js", "Computer Science"],
   authors: [{ name: "Balachandran S" }],
   openGraph: {
