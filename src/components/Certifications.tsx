@@ -28,8 +28,7 @@ export function Certifications() {
       date: "Dec 2025",
       description: "Advanced analytics implementation and data analysis strategies.",
       icon: <Award className="w-6 h-6 text-emerald-400" />,
-      link: "https://i.im.ge/epAJpS/Screenshot_2025-12-20_192253.png",
-      image: "https://i.im.ge/epAJpS/Screenshot_2025-12-20_192253.png",
+      image: "/certs/ga-cert.png",
       accent: "emerald-400",
       sysId: "CERT-GA-01",
     },
@@ -39,7 +38,7 @@ export function Certifications() {
       date: "March 2026",
       description: "Advanced AI champion certification for intelligent system architectures.",
       icon: <Award className="w-6 h-6 text-purple-400" />,
-      image: "https://raw.githubusercontent.com/Balachandransakthivel/bala-portfolio-website/main/public/certs/purple-fabric-champion.png",
+      image: "/certs/pf-champion.png",
       accent: "purple-400",
       sysId: "CERT-PF-CH",
     },
@@ -49,7 +48,7 @@ export function Certifications() {
       date: "March 2026",
       description: "Engineering methodologies for integrating and deploying AI fabrics.",
       icon: <Award className="w-6 h-6 text-pink-400" />,
-      image: "https://raw.githubusercontent.com/Balachandransakthivel/bala-portfolio-website/main/public/certs/purple-fabric-engineer.png",
+      image: "/certs/pf-engineer.png",
       accent: "pink-400",
       sysId: "CERT-PF-EG",
     },
@@ -59,7 +58,7 @@ export function Certifications() {
       date: "Participation",
       description: "Innovative engineering and design challenges using modern CAD tools.",
       icon: <Award className="w-6 h-6 text-orange-500" />,
-      image: "https://raw.githubusercontent.com/Balachandransakthivel/bala-portfolio-website/main/public/certs/design-spark.png",
+      image: "/certs/design-spark.png",
       accent: "orange-500",
       sysId: "CERT-DS-01",
     },
@@ -69,7 +68,7 @@ export function Certifications() {
       date: "Completed",
       description: "Comprehensive training in enterprise-grade React application development.",
       icon: <Award className="w-6 h-6 text-blue-400" />,
-      image: "https://raw.githubusercontent.com/Balachandransakthivel/bala-portfolio-website/main/public/certs/react-mastery.png",
+      image: "/certs/react-mastery.png",
       accent: "blue-400",
       sysId: "CERT-LT-FS",
     },
@@ -105,6 +104,39 @@ export function Certifications() {
       link: "https://www.hackerrank.com/certificates/aef44a320655",
       accent: "[#00EA64]",
       sysId: "CERT-HR-PY",
+    },
+  ];
+
+  const internshipCerts: Certification[] = [
+    {
+      title: "UI/UX Design Internship",
+      issuer: "Zoro Tech",
+      date: "Dec 2025",
+      description: "Successfully completed an internship in the field of UI/UX Design, gaining practical experience.",
+      icon: <Award className="w-6 h-6 text-green-400" />,
+      image: "/certs/zoro-tech.jpg",
+      accent: "green-400",
+      sysId: "INT-UIUX-01",
+    },
+    {
+      title: "Mobile App Development Internship",
+      issuer: "ALO Info-Tech",
+      date: "June 2025",
+      description: "Hands-on experience in designing, developing, and testing mobile applications.",
+      icon: <Terminal className="w-6 h-6 text-blue-400" />,
+      image: "/certs/alo-infotech.png",
+      accent: "blue-400",
+      sysId: "INT-MOB-01",
+    },
+    {
+      title: "Web Designer Workshop",
+      issuer: "Training Trains",
+      date: "Jan 2025",
+      description: "Understanding of fundamental concepts of Web Designer training program.",
+      icon: <Terminal className="w-6 h-6 text-orange-400" />,
+      image: "/certs/training-trains.jpg",
+      accent: "orange-400",
+      sysId: "TRN-WEB-01",
     },
   ];
 
@@ -176,6 +208,73 @@ export function Certifications() {
               <div className="mt-auto">
                 <div className="text-xs font-mono font-bold text-primary tracking-widest flex items-center gap-2 uppercase">
                   Verify Credentials <ExternalLink className="w-3 h-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* INTERNSHIPS & TRAINING SECTION */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12 mt-12"
+        >
+          <span className="text-primary font-mono text-sm tracking-[0.3em] uppercase flex items-center justify-center gap-2">
+            <Terminal className="w-4 h-4" /> SYS.EXPERIENCE
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4 font-display tracking-widest uppercase">
+            <span className="text-gradient">Internships &</span> Training
+          </h2>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+          {internshipCerts.map((cert, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              onClick={() => {
+                if (cert.image) {
+                  setSelectedCert(cert);
+                } else if (cert.link) {
+                  window.open(cert.link, "_blank");
+                }
+              }}
+              className="group relative bg-card/20 backdrop-blur-md rounded-xl p-6 border border-border hover:border-primary/50 transition-all cursor-pointer overflow-hidden cyber-button h-full flex flex-col"
+            >
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent h-[200%] -translate-y-full group-hover:translate-y-full transition-transform duration-1000 ease-in-out pointer-events-none mix-blend-overlay" />
+              <div className={`absolute top-0 left-0 w-1 h-full bg-${cert.accent} opacity-50 group-hover:opacity-100 transition-opacity drop-shadow-[0_0_8px_var(--tw-shadow-color)] shadow-${cert.accent}`} />
+
+              <div className="flex items-start justify-between mb-4 flex-none">
+                <div className="p-3 rounded-lg bg-background/50 border border-primary/20 backdrop-blur-sm group-hover:scale-110 transition-transform">
+                  {cert.icon}
+                </div>
+                <div className="text-right">
+                  <span className="text-xs font-mono text-muted-foreground uppercase opacity-70 tracking-widest block mb-1">SYS.ID</span>
+                  <span className="text-[10px] font-mono text-primary bg-primary/10 px-2 py-1 rounded">
+                    {cert.sysId}
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex-1">
+                <h3 className="text-lg font-display font-semibold text-foreground mb-2 leading-tight group-hover:text-primary transition-colors">
+                  {cert.title}
+                </h3>
+                <p className="text-sm font-mono text-muted-foreground uppercase mb-4 opacity-80">
+                  {cert.issuer} • {cert.date}
+                </p>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                  {cert.description}
+                </p>
+              </div>
+
+              <div className="mt-auto">
+                <div className="text-xs font-mono font-bold text-primary tracking-widest flex items-center gap-2 uppercase">
+                  View Certificate <ExternalLink className="w-3 h-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </div>
               </div>
             </motion.div>
