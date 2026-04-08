@@ -51,12 +51,12 @@ export function Hero() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center lg:text-left order-2 lg:order-1"
+            className="text-center lg:text-left order-2 lg:order-1 z-10"
           >
             <motion.p
               initial={{ opacity: 0 }}
@@ -70,7 +70,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 whitespace-nowrap"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4.2rem] font-bold mb-4 leading-tight"
             >
               <span className="text-gradient">Balachandran S</span>
             </motion.h1>
@@ -184,16 +184,16 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative order-1 lg:order-2 flex justify-center"
           >
-            <div className="flex-1 relative mt-16 md:mt-0 flex justify-center w-full max-w-[400px] md:max-w-none">
+            <div className="flex-1 relative mt-16 md:mt-0 flex justify-center w-full max-w-[400px] md:max-w-none z-10">
               {/* Cyber HUD Badges */}
-              <div className="absolute -left-10 lg:-left-20 top-1/4 bg-card/60 backdrop-blur-md border border-primary/30 p-3 rounded-lg cyber-button animate-bounce" style={{ animationDuration: '4s' }}>
+              <div className="absolute -left-2 sm:-left-10 lg:-left-6 xl:-left-16 top-[15%] sm:top-1/4 bg-card/80 backdrop-blur-md border border-primary/40 p-2 sm:p-3 rounded-lg cyber-button animate-bounce z-20" style={{ animationDuration: '4s' }}>
                 <p className="text-[10px] font-mono text-primary">SYS.UPTIME</p>
-                <p className="text-xl font-display font-bold text-foreground glow-text">99.9%</p>
+                <p className="text-lg sm:text-xl font-display font-bold text-foreground glow-text">99.9%</p>
               </div>
 
-              <div className="absolute -right-8 lg:-right-16 bottom-1/4 bg-card/60 backdrop-blur-md border border-amber-500/30 p-3 rounded-lg cyber-button animate-pulse" style={{ animationDuration: '3s' }}>
+              <div className="absolute -right-2 sm:-right-8 lg:-right-6 xl:-right-12 bottom-[15%] sm:bottom-1/4 bg-card/80 backdrop-blur-md border border-amber-500/40 p-2 sm:p-3 rounded-lg cyber-button animate-pulse z-20" style={{ animationDuration: '3s' }}>
                 <p className="text-[10px] font-mono text-amber-500">PROJECTS</p>
-                <p className="text-xl font-display font-bold text-foreground drop-shadow-[0_0_10px_rgba(240,165,0,0.5)]">15+</p>
+                <p className="text-lg sm:text-xl font-display font-bold text-foreground drop-shadow-[0_0_10px_rgba(240,165,0,0.5)]">15+</p>
               </div>
 
               <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96">
